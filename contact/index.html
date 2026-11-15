@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Matthew Finley</title>
+  <meta name="description" content="Email hello@matthewfinley.org, send a note through the form, or leave a moderated guestbook message.">
+  <meta name="author" content="Matthew Finley">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://matthewfinley.org/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Matthew Finley">
+  <meta property="og:title" content="Contact · Matthew Finley">
+  <meta property="og:description" content="Email hello@matthewfinley.org, send a note through the form, or leave a moderated guestbook message.">
+  <meta property="og:url" content="https://matthewfinley.org/contact/">
+  <meta property="og:image" content="https://matthewfinley.org/og/og-default.png">
+  <meta property="og:image:alt" content="Matthew Frog Finley, Cary, NC. Games, apps, and music.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact · Matthew Finley">
+  <meta name="twitter:description" content="Email hello@matthewfinley.org, send a note through the form, or leave a moderated guestbook message.">
+  <meta name="twitter:image" content="https://matthewfinley.org/og/og-default.png">
+  <meta name="twitter:creator" content="@matthew1">
+  <meta name="theme-color" content="#10140f">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Matthew Finley" href="https://matthewfinley.org/feed.xml">
+  <link rel="me" href="https://github.com/m-fin">
+  <link rel="me" href="https://x.com/matthew1">
+  <link rel="me" href="https://www.youtube.com/@AOECGB">
+  <link rel="me" href="https://soundcloud.com/sonicrift">
+  <link rel="preload" href="/assets/fonts/fraunces-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/theme-init.js"></script>
+</head>
+<body data-page="contact">
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="wordmark" href="/"><span aria-hidden="true">MF</span><span class="visually-hidden">Matthew Finley, home</span></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/projects/">Projects</a>
+          <a href="/music/">Music</a>
+          <a href="/videos/">Videos</a>
+          <a href="/blog/">Blog</a>
+          <a href="/links/">Links</a>
+          <a href="/support/" class="nav-support">Support</a>
+          <a href="/contact/" aria-current="page">Contact</a>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle">Light theme</button>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    <div class="wrap section">
+      <p class="kicker">Contact</p>
+      <h1>Say hello</h1>
+      <div class="prose">
+        <p>Email is the reliable path: <a href="mailto:hello@matthewfinley.org">hello@matthewfinley.org</a>. I am in Cary, NC. This page does not list a phone number or a street address, and it will not.</p>
+        <p>The form stores a message when Cloudflare Turnstile and either D1 or KV are configured. It can also forward a copy through Cloudflare Email Routing, or through a MailChannels-compatible request, when those are set up in the dashboard. Until then, the form explains itself and the email address still works. Do not put secrets in a note. I will read what you send. I do not need passwords, recovery codes, or documents.</p>
+      </div>
+      <form id="contact-form" class="panel" novalidate>
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" required maxlength="80" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required maxlength="200" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required maxlength="4000" rows="6"></textarea>
+        </div>
+        <div id="contact-turnstile"></div>
+        <p id="contact-status" class="status" role="status"></p>
+        <button class="btn btn-accent" type="submit">Send message</button>
+      </form>
+    </div>
+    <section class="wrap section" aria-labelledby="guest-title">
+      <h2 id="guest-title">Guestbook</h2>
+      <div class="prose">
+        <p>A short public note. New notes stay hidden until they are approved. Names and messages are stored in Cloudflare D1 when that database is bound, and in KV otherwise. They are not your login, and they are not a payment.</p>
+      </div>
+      <form id="guestbook-form" class="panel" novalidate>
+        <div class="hp" aria-hidden="true">
+          <label for="guest-company">Company</label>
+          <input id="guest-company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <label for="guest-name">Name</label>
+          <input id="guest-name" name="name" required maxlength="80" autocomplete="nickname">
+        </div>
+        <div class="form-row">
+          <label for="guest-message">Note</label>
+          <textarea id="guest-message" name="message" required maxlength="1000" rows="4"></textarea>
+        </div>
+        <div id="guest-turnstile"></div>
+        <p id="guest-status" class="status" role="status"></p>
+        <button class="btn btn-accent" type="submit">Leave a note</button>
+      </form>
+      <ul class="note-list" data-notes>
+        <li>Notes appear here after they are approved.</li>
+      </ul>
+      <details class="panel">
+        <summary>Review hidden notes</summary>
+        <form id="review-form">
+          <div class="form-row">
+            <label for="mod-token">Moderator token</label>
+            <input id="mod-token" name="token" type="password" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Load hidden notes</button>
+          <p id="review-status" class="status" role="status"></p>
+        </form>
+        <ul class="note-list" data-pending></ul>
+      </details>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>Matthew "Frog" Finley</strong>
+        <p>Cary, NC · <a href="mailto:hello@matthewfinley.org">hello@matthewfinley.org</a></p>
+        <p class="views" data-views hidden></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/privacy/">Privacy</a>
+        <a href="/feed.xml">RSS</a>
+        <a href="/links/">Links</a>
+        <a href="/support/">Support</a>
+        <a href="/legacy/">Archived pages</a>
+      </nav>
+    </div>
+  </footer>
+  <div id="cookie-notice" class="cookie" role="region" aria-label="Cookie notice" hidden>
+    <p>Advertising cookies stay off until you accept them. If Google AdSense is enabled later, accepting lets this site load Google's ad script, which can set cookies. Rejecting keeps that script off. The theme and this choice stay in this browser. Cloudflare Web Analytics, when a token is configured, does not use cookies. <a href="/privacy/">Privacy policy</a>.</p>
+    <div class="actions">
+      <button type="button" class="btn btn-accent" data-consent="accepted">Accept</button>
+      <button type="button" class="btn" data-consent="rejected">Reject</button>
+    </div>
+  </div>
+  <script type="module" src="/js/site.js"></script>
+</body>
+</html>

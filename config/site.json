@@ -1,0 +1,96 @@
+{
+  "adsense": {
+    "publisherId": "",
+    "slots": {
+      "home-1": "",
+      "projects-1": "",
+      "article-1": ""
+    }
+  },
+  "analytics": {
+    "token": ""
+  },
+  "support": [
+    {
+      "id": "cashapp",
+      "label": "Cash App",
+      "enabled": false,
+      "handle": "TODO",
+      "url": ""
+    },
+    {
+      "id": "venmo",
+      "label": "Venmo",
+      "enabled": false,
+      "handle": "TODO",
+      "url": ""
+    },
+    {
+      "id": "paypal",
+      "label": "PayPal",
+      "enabled": false,
+      "handle": "TODO",
+      "url": ""
+    },
+    {
+      "id": "xmoney",
+      "label": "X Money",
+      "enabled": false,
+      "handle": "TODO",
+      "url": ""
+    },
+    {
+      "id": "kofi",
+      "label": "Ko-fi",
+      "enabled": false,
+      "handle": "TODO",
+      "url": ""
+    },
+    {
+      "id": "bmc",
+      "label": "Buy Me a Coffee",
+      "enabled": false,
+      "handle": "TODO",
+      "url": ""
+    },
+    {
+      "id": "github",
+      "label": "GitHub Sponsors",
+      "enabled": false,
+      "handle": "TODO",
+      "url": ""
+    },
+    {
+      "id": "bitcoin",
+      "label": "Bitcoin",
+      "enabled": false,
+      "handle": "TODO",
+      "url": "",
+      "address": "TODO"
+    },
+    {
+      "id": "lightning",
+      "label": "Lightning",
+      "enabled": false,
+      "handle": "TODO",
+      "url": "",
+      "address": "TODO"
+    },
+    {
+      "id": "ethereum",
+      "label": "Ethereum",
+      "enabled": false,
+      "handle": "TODO",
+      "url": "",
+      "address": "TODO"
+    },
+    {
+      "id": "solana",
+      "label": "Solana",
+      "enabled": false,
+      "handle": "TODO",
+      "url": "",
+      "address": "TODO"
+    }
+  ]
+}

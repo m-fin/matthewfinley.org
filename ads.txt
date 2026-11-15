@@ -1,0 +1,2 @@
+# Replace this file with the ads.txt line from your AdSense account after approval.
+# Do not add a publisher ID until that account exists.

@@ -1,0 +1,4 @@
+Contact: mailto:hello@matthewfinley.org
+Preferred-Languages: en
+Canonical: https://matthewfinley.org/.well-known/security.txt
+Expires: 2027-11-15T00:00:00.000Z
