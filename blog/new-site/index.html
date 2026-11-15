@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A site of my own · Matthew Finley</title>
+  <meta name="description" content="Why matthewfinley.org is a new static site, and what happened to the old pages.">
+  <meta name="author" content="Matthew Finley">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://matthewfinley.org/blog/new-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Matthew Finley">
+  <meta property="og:title" content="A site of my own · Matthew Finley">
+  <meta property="og:description" content="Why matthewfinley.org is a new static site, and what happened to the old pages.">
+  <meta property="og:url" content="https://matthewfinley.org/blog/new-site/">
+  <meta property="og:image" content="https://matthewfinley.org/og/og-default.png">
+  <meta property="og:image:alt" content="Matthew Frog Finley, Cary, NC. Games, apps, and music.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A site of my own · Matthew Finley">
+  <meta name="twitter:description" content="Why matthewfinley.org is a new static site, and what happened to the old pages.">
+  <meta name="twitter:image" content="https://matthewfinley.org/og/og-default.png">
+  <meta name="twitter:creator" content="@matthew1">
+  <meta name="theme-color" content="#10140f">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Matthew Finley" href="https://matthewfinley.org/feed.xml">
+  <link rel="me" href="https://github.com/m-fin">
+  <link rel="me" href="https://x.com/matthew1">
+  <link rel="me" href="https://www.youtube.com/@AOECGB">
+  <link rel="me" href="https://soundcloud.com/sonicrift">
+  <link rel="preload" href="/assets/fonts/fraunces-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/theme-init.js"></script>
+</head>
+<body data-page="blog">
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="wordmark" href="/"><span aria-hidden="true">MF</span><span class="visually-hidden">Matthew Finley, home</span></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/projects/">Projects</a>
+          <a href="/music/">Music</a>
+          <a href="/videos/">Videos</a>
+          <a href="/blog/" aria-current="page">Blog</a>
+          <a href="/links/">Links</a>
+          <a href="/support/" class="nav-support">Support</a>
+          <a href="/contact/">Contact</a>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle">Light theme</button>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    <article class="wrap section prose">
+      <p class="kicker"><time datetime="2026-11-15">November 15, 2026</time></p>
+      <h1>A site of my own</h1>
+      <p>matthewfinley.org used to be a handful of separate HTML files. One of them was an office-hours schedule from the fall of 2021. Another was a personal page with a portrait, a few videos, and a photograph of the Eagle Nebula. The front door of the domain pointed at the schedule. That was a reasonable site for a specific semester. It is a poor front door now.</p>
+      <p>This version is the replacement. It is still static files, because a personal site does not need a build pipeline to say who I am and what I am making. Cloudflare Pages serves the HTML, CSS, and JavaScript. A few things that have to remember something, the contact form, the guestbook, and a page-view counter, are Pages Functions. They do nothing useful until the Cloudflare bindings exist, and the pages say so instead of failing in silence.</p>
+      <p>The sections are the ones I actually have material for. Home and About are the short and long versions of the same biography: computer science student in Cary, NC, about a year and a half left on the degree, builder of games and apps, music under the name sonicrift. Projects names SKYCHARGE, DRIFTHOME, Jingle, and Lake House Manager, and then gets out of the way so the GitHub profile can list everything else that is already public. Music and Videos embed the accounts rather than retyping them. Blog is this note and two others. Support is a row of payment methods that stay disabled until the links are real. Contact is an email address first and a form second.</p>
+      <p>I moved the old files instead of throwing them away. They live under <a href="/legacy/">/legacy</a>. The office-hours page is an archive of a semester, not a current invitation. Meeting links that used to be on it are not a way to reach me. The way to reach me is <a href="mailto:hello@matthewfinley.org">hello@matthewfinley.org</a>.</p>
+      <p>Two things that will show up later are deliberately absent today. Google AdSense has marked slots and a privacy policy, and it does not have a publisher ID or an ad script. The support buttons have names, and they do not have handles. Both are config. When the values exist, the site can start using them without a redesign. Until then, empty is the honest state.</p>
+      <p>If you subscribed to nothing before, the <a href="/feed.xml">RSS feed</a> is the way to follow the notes. There will not be a post every day. There will be a post when there is something to correct or to add, which is a better promise than a calendar I would miss.</p>
+      <aside class="ad-slot" data-ad-placement="article-1" aria-label="Advertisement">
+        <p class="ad-label">Advertisement</p>
+        <div class="ad-frame">
+          <p class="ad-pending">This space is reserved for a Google AdSense unit. It stays empty until a publisher ID and ad unit ID are added, and until advertising cookies are accepted.</p>
+        </div>
+      </aside>
+    </article>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>Matthew "Frog" Finley</strong>
+        <p>Cary, NC · <a href="mailto:hello@matthewfinley.org">hello@matthewfinley.org</a></p>
+        <p class="views" data-views hidden></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/privacy/">Privacy</a>
+        <a href="/feed.xml">RSS</a>
+        <a href="/links/">Links</a>
+        <a href="/support/">Support</a>
+        <a href="/legacy/">Archived pages</a>
+      </nav>
+    </div>
+  </footer>
+  <div id="cookie-notice" class="cookie" role="region" aria-label="Cookie notice" hidden>
+    <p>Advertising cookies stay off until you accept them. If Google AdSense is enabled later, accepting lets this site load Google's ad script, which can set cookies. Rejecting keeps that script off. The theme and this choice stay in this browser. Cloudflare Web Analytics, when a token is configured, does not use cookies. <a href="/privacy/">Privacy policy</a>.</p>
+    <div class="actions">
+      <button type="button" class="btn btn-accent" data-consent="accepted">Accept</button>
+      <button type="button" class="btn" data-consent="rejected">Reject</button>
+    </div>
+  </div>
+  <script type="module" src="/js/site.js"></script>
+</body>
+</html>

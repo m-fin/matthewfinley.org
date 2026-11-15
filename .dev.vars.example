@@ -1,0 +1,10 @@
+# Copy to .dev.vars for `wrangler pages dev`. Do not commit .dev.vars.
+# Cloudflare's public Turnstile test keys always pass and are documented at
+# https://developers.cloudflare.com/turnstile/troubleshooting/testing/
+# Do not use the test keys in production.
+
+TURNSTILE_SITE_KEY=
+TURNSTILE_SECRET_KEY=
+MODERATION_TOKEN=
+MAIL_PROVIDER=
+RATE_LIMIT_SALT=

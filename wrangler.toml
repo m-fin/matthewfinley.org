@@ -1,0 +1,27 @@
+# Cloudflare Pages configuration for matthewfinley.org.
+# Output is the repository root. There is no build command.
+# Bindings below are commented so the first deploy succeeds before
+# KV, D1, and Email Routing exist. Uncomment them after you create
+# the resources and paste the real IDs. Variable names must stay
+# VIEWS, DB, and EMAIL. Dashboard steps are in the README.
+
+name = "matthewfinley"
+compatibility_date = "2026-11-15"
+pages_build_output_dir = "."
+
+[vars]
+CONTACT_TO = "hello@matthewfinley.org"
+CONTACT_FROM = "hello@matthewfinley.org"
+
+# [[kv_namespaces]]
+# binding = "VIEWS"
+# id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "matthewfinley"
+# database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# [[send_email]]
+# name = "EMAIL"
+# destination_address = "hello@matthewfinley.org"

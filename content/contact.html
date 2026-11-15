@@ -1,0 +1,67 @@
+    <div class="wrap section">
+      <p class="kicker">Contact</p>
+      <h1>Say hello</h1>
+      <div class="prose">
+        <p>Email is the reliable path: <a href="mailto:hello@matthewfinley.org">hello@matthewfinley.org</a>. I am in Cary, NC. This page does not list a phone number or a street address, and it will not.</p>
+        <p>The form stores a message when Cloudflare Turnstile and either D1 or KV are configured. It can also forward a copy through Cloudflare Email Routing, or through a MailChannels-compatible request, when those are set up in the dashboard. Until then, the form explains itself and the email address still works. Do not put secrets in a note. I will read what you send. I do not need passwords, recovery codes, or documents.</p>
+      </div>
+      <form id="contact-form" class="panel" novalidate>
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" required maxlength="80" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required maxlength="200" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required maxlength="4000" rows="6"></textarea>
+        </div>
+        <div id="contact-turnstile"></div>
+        <p id="contact-status" class="status" role="status"></p>
+        <button class="btn btn-accent" type="submit">Send message</button>
+      </form>
+    </div>
+    <section class="wrap section" aria-labelledby="guest-title">
+      <h2 id="guest-title">Guestbook</h2>
+      <div class="prose">
+        <p>A short public note. New notes stay hidden until they are approved. Names and messages are stored in Cloudflare D1 when that database is bound, and in KV otherwise. They are not your login, and they are not a payment.</p>
+      </div>
+      <form id="guestbook-form" class="panel" novalidate>
+        <div class="hp" aria-hidden="true">
+          <label for="guest-company">Company</label>
+          <input id="guest-company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <label for="guest-name">Name</label>
+          <input id="guest-name" name="name" required maxlength="80" autocomplete="nickname">
+        </div>
+        <div class="form-row">
+          <label for="guest-message">Note</label>
+          <textarea id="guest-message" name="message" required maxlength="1000" rows="4"></textarea>
+        </div>
+        <div id="guest-turnstile"></div>
+        <p id="guest-status" class="status" role="status"></p>
+        <button class="btn btn-accent" type="submit">Leave a note</button>
+      </form>
+      <ul class="note-list" data-notes>
+        <li>Notes appear here after they are approved.</li>
+      </ul>
+      <details class="panel">
+        <summary>Review hidden notes</summary>
+        <form id="review-form">
+          <div class="form-row">
+            <label for="mod-token">Moderator token</label>
+            <input id="mod-token" name="token" type="password" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Load hidden notes</button>
+          <p id="review-status" class="status" role="status"></p>
+        </form>
+        <ul class="note-list" data-pending></ul>
+      </details>
+    </section>

@@ -1,0 +1,10 @@
+{
+  "name": "matthewfinley-org",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "python3 scripts/render_site.py",
+    "test": "node --test tests/",
+    "pages": "wrangler pages dev ."
+  }
+}
