@@ -82,7 +82,7 @@ PAGES = [
     {
         "path": "/music/",
         "title": "Music · sonicrift",
-        "description": "sonicrift is Matthew Finley's music project. The name is always lowercase. Listen to an alto sax jam on this page, or on SoundCloud.",
+        "description": "sonicrift is Matthew Finley's music project. The name is always lowercase. Signals, coded pieces, alto sax, Spotify, Apple Music, and SoundCloud.",
         "file": "music.html",
         "nav": "music",
     },
@@ -128,7 +128,7 @@ PAGES = [
     {
         "path": "/links/",
         "title": "Links · Matthew Finley",
-        "description": "Link-in-bio page for Matthew Finley: GitHub, X, YouTube, SoundCloud, email, and this site.",
+        "description": "Link-in-bio page for Matthew Finley: GitHub, X, YouTube, SoundCloud, Spotify, Apple Music, email, and this site.",
         "file": "links.html",
         "nav": "links",
     },
@@ -233,7 +233,7 @@ def render_page(page):
     if page["path"] == "/":
         home_json = """
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Matthew Finley","alternateName":"Frog","email":"hello@matthewfinley.org","homeLocation":{"@type":"Place","name":"Cary, NC"},"url":"https://matthewfinley.org/","sameAs":["https://github.com/m-fin","https://x.com/matthew1","https://www.youtube.com/@AOECGB","https://soundcloud.com/sonicrift"]}
+  {"@context":"https://schema.org","@type":"Person","name":"Matthew Finley","alternateName":"Frog","email":"hello@matthewfinley.org","homeLocation":{"@type":"Place","name":"Cary, NC"},"url":"https://matthewfinley.org/","sameAs":["https://github.com/m-fin","https://x.com/matthew1","https://www.youtube.com/@AOECGB","https://soundcloud.com/sonicrift","https://open.spotify.com/artist/622lO1Sz70XKqIC80aKaYf","https://music.apple.com/us/artist/matthew-finley/901965944"]}
   </script>"""
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -267,6 +267,8 @@ def render_page(page):
   <link rel="me" href="https://x.com/matthew1">
   <link rel="me" href="https://www.youtube.com/@AOECGB">
   <link rel="me" href="https://soundcloud.com/sonicrift">
+  <link rel="me" href="https://open.spotify.com/artist/622lO1Sz70XKqIC80aKaYf">
+  <link rel="me" href="https://music.apple.com/us/artist/matthew-finley/901965944">
   <link rel="preload" href="/assets/fonts/fraunces-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/styles.css">
