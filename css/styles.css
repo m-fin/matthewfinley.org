@@ -483,6 +483,48 @@ a.pay:hover { border-color: var(--accent); }
 
 .soundcloud { aspect-ratio: 16 / 10; min-height: 300px; }
 
+.audio-card {
+  margin: 0;
+  padding: 1.15rem 1.2rem 1.25rem;
+  background: var(--bg-raise);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 40rem;
+}
+
+.audio-card figcaption h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.audio-card figcaption p:not(.kicker) {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+}
+
+.audio-card audio {
+  display: block;
+  width: 100%;
+  height: 2.75rem;
+  margin: 0.2rem 0 0.7rem;
+}
+
+.audio-links {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.audio-links a {
+  color: var(--accent-text);
+  text-decoration: none;
+}
+
+.audio-links a:hover,
+.audio-links a:focus-visible { text-decoration: underline; }
+
 .repo-tools {
   display: flex;
   flex-wrap: wrap;

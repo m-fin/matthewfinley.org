@@ -1,8 +1,9 @@
-const VERSION = "mf-20261115-2";
+const VERSION = "mf-20261115-3";
 const PRECACHE = [
   "/",
   "/about/",
   "/projects/",
+  "/inventions/",
   "/music/",
   "/videos/",
   "/blog/",
