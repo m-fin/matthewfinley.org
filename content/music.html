@@ -1,27 +1,218 @@
     <div class="wrap section prose">
       <p class="kicker">Music</p>
       <h1>sonicrift</h1>
-      <p>sonicrift is my music project. The name is always written in lowercase, including in the title of this page, so the heading stays lowercase too. The place to listen is <a href="https://soundcloud.com/sonicrift">soundcloud.com/sonicrift</a>.</p>
-      <p>A recent alto sax jam is hosted on this page, under the sonicrift name, so you can press play without leaving the site. I am not printing a full track list here. SoundCloud is the catalog, and the player farther down is SoundCloud's own embed of that profile. If the embed is blocked, the link above still opens the project. Code repositories that use the sonicrift name, when they are public, show up in the GitHub list on the <a href="/projects/">projects page</a>. I am not describing those repositories as a discography.</p>
+      <p>sonicrift is my music project. The name is always written in lowercase, including in the title of this page, so the heading stays lowercase too.</p>
+      <p>This page is the catalog. Signals, from 2020, is the first official EP. The 2026 pieces were made with code. An alto sax jam from November 15, 2026, is hosted on this page and on SoundCloud. Earlier SoundCloud experiments from 2022 and 2023 sit in a collapsed list further down. The players here are that sax recording, a Spotify embed of Signals, and SoundCloud's embed of the sonicrift profile. If an embed is blocked, the links still open the same music.</p>
       <p>The rest of the site is games, an alarm clock, a C++ project, and notes. Music sits beside that work rather than inside a separate brand. If you want to support it, the <a href="/support/">support page</a> is the same set of methods used for the games, and those methods stay off until the links are real.</p>
     </div>
-    <div class="wrap section">
+
+    <section class="wrap section" aria-labelledby="listen-title">
+      <h2 id="listen-title">Listen</h2>
+      <p>The project is <span class="keep-case">sonicrift</span>. On Spotify and Apple Music the artist name is Matthew Finley. Same catalog, two names, depending on where you press play.</p>
+      <ul class="link-row">
+        <li><a class="btn" rel="me" href="https://open.spotify.com/artist/622lO1Sz70XKqIC80aKaYf">Spotify</a></li>
+        <li><a class="btn" rel="me" href="https://music.apple.com/us/artist/matthew-finley/901965944">Apple Music</a></li>
+        <li><a class="btn" rel="me" href="https://soundcloud.com/sonicrift">SoundCloud</a></li>
+      </ul>
+      <div class="embed-block">
+        <h3>Signals on Spotify</h3>
+        <div class="frame spotify">
+          <iframe data-spotify-embed="https://open.spotify.com/embed/album/3PTLrNjb0r7bBzJ5YMuXe9" title="Signals EP on Spotify" loading="lazy" height="352" src="https://open.spotify.com/embed/album/3PTLrNjb0r7bBzJ5YMuXe9?theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+      <div class="embed-block">
+        <h3><span class="keep-case">sonicrift</span> on SoundCloud</h3>
+        <div class="frame soundcloud">
+          <iframe title="sonicrift on SoundCloud" loading="lazy" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/sonicrift&amp;color=%23215326&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+        </div>
+        <p><a class="btn" href="https://soundcloud.com/sonicrift">Open sonicrift on SoundCloud</a></p>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="discography-title">
+      <h2 id="discography-title">Discography</h2>
+      <p>Grouped by era. Durations are the length of the published file. Track titles open the place that hosts that recording.</p>
+
+      <section class="era" aria-labelledby="signals-title">
+        <h3 id="signals-title">Signals EP, 2020</h3>
+        <p>Four tracks. This is the first official EP.</p>
+        <ul class="meta">
+          <li><a href="https://open.spotify.com/album/3PTLrNjb0r7bBzJ5YMuXe9">Signals on Spotify</a></li>
+          <li><a href="https://music.apple.com/us/album/signals-ep/1545441965">Signals on Apple Music</a></li>
+          <li><a href="https://soundcloud.com/sonicrift/sets/test">Signals set on SoundCloud</a></li>
+        </ul>
+        <ol class="track-list" aria-label="Signals EP tracks">
+          <li>
+            <a href="https://open.spotify.com/track/2yEZrNG4t3Hr9k80ixE3Af">Hypertunnel<span class="visually-hidden"> on Spotify</span></a>
+            <span class="duration">5:08<span class="visually-hidden">, 5 minutes 8 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://open.spotify.com/track/5OPNRtqcBtlZPvpLVtHmYv">Buzz off Mosquito<span class="visually-hidden"> on Spotify</span></a>
+            <span class="duration">2:18<span class="visually-hidden">, 2 minutes 18 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://open.spotify.com/track/7kgmEbiuWLSr6HRP4BIYFR">Cube Land<span class="visually-hidden"> on Spotify</span></a>
+            <span class="duration">6:04<span class="visually-hidden">, 6 minutes 4 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://open.spotify.com/track/5tTfx2we6vUXBH4zKoSRNa">Sine Flower<span class="visually-hidden"> on Spotify</span></a>
+            <span class="duration">1:19<span class="visually-hidden">, 1 minute 19 seconds</span></span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="era" aria-labelledby="coded-title">
+        <h3 id="coded-title">Coded and generative pieces, 2026</h3>
+        <p>These three are made with code. Machine Sleep and Space Drift are generated in Python. Bionic Body is tied to the <a href="https://m-fin.github.io/bionic-body/">Bionic Body Tracker</a>: each body system on the tracker becomes an instrument. The scripts are in the public repository <a href="https://github.com/m-fin/sonic-rift">github.com/m-fin/sonic-rift</a>.</p>
+        <ol class="track-list" aria-label="Coded and generative pieces from 2026">
+          <li>
+            <a href="https://soundcloud.com/sonicrift/bionic-body">Bionic Body<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">1:48<span class="visually-hidden">, 1 minute 48 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/machine-sleep">Machine Sleep<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">10:00<span class="visually-hidden">, 10 minutes</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/space-drift">Space Drift<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">10:00<span class="visually-hidden">, 10 minutes</span></span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="era" aria-labelledby="sax-catalog-title">
+        <h3 id="sax-catalog-title">Sax</h3>
+        <p>The recording is also hosted on this page. The player is in the <a href="#sax">Sax section</a>.</p>
+        <ol class="track-list" aria-label="Sax recordings">
+          <li>
+            <a href="https://soundcloud.com/sonicrift/alto-sax-jam-nov-15-2026">Alto Sax Jam (November 15, 2026)<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">11:03<span class="visually-hidden">, 11 minutes 3 seconds</span></span>
+          </li>
+        </ol>
+      </section>
+
+      <details class="experiments">
+        <summary><h3>Early experiments, 2022–2023</h3></summary>
+        <p>Sixteen short pieces on SoundCloud, from before the later releases. Open the list when you want them.</p>
+        <ol class="track-list" aria-label="Early experiments, 2022 to 2023">
+          <li>
+            <a href="https://soundcloud.com/sonicrift/sonic-rift">Sonic Rift sting<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">0:19<span class="visually-hidden">, 19 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/74127856767183424127896a1">Pulse<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">2:14<span class="visually-hidden">, 2 minutes 14 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/732617382931a1">Celebration<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">1:11<span class="visually-hidden">, 1 minute 11 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/528a1">528<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">5:28<span class="visually-hidden">, 5 minutes 28 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/998887827a1">Neural Overture<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">2:52<span class="visually-hidden">, 2 minutes 52 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/7678867070534a1">Synthetic Interlude<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">2:30<span class="visually-hidden">, 2 minutes 30 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/913814847714287124a1">Analog Haven<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">1:37<span class="visually-hidden">, 1 minute 37 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/85327824537890435789a1">Circuit Breaker<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">2:19<span class="visually-hidden">, 2 minutes 19 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/43738526a1">Rom<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">2:08<span class="visually-hidden">, 2 minutes 8 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/9853278874a1">Le<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">3:54<span class="visually-hidden">, 3 minutes 54 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/541488843a1">Be<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">2:08<span class="visually-hidden">, 2 minutes 8 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/5690952578a1">Rock n' Roll<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">1:49<span class="visually-hidden">, 1 minute 49 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/80954236a1">For You<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">5:02<span class="visually-hidden">, 5 minutes 2 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/fn2">Fn2<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">2:04<span class="visually-hidden">, 2 minutes 4 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/215837a">215837<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">8:42<span class="visually-hidden">, 8 minutes 42 seconds</span></span>
+          </li>
+          <li>
+            <a href="https://soundcloud.com/sonicrift/perspective-80">Perspective 80<span class="visually-hidden"> on SoundCloud</span></a>
+            <span class="duration">25:22<span class="visually-hidden">, 25 minutes 22 seconds</span></span>
+          </li>
+        </ol>
+      </details>
+    </section>
+
+    <section class="wrap section" aria-labelledby="pending-title">
+      <h2 id="pending-title">Coming to Spotify and other stores</h2>
+      <article class="card release-card">
+        <p class="kicker">Jazz · RouteNote</p>
+        <h3>Alto Sax Jam</h3>
+        <p>November 15, 2026. 11 minutes 3 seconds. Jazz. Submitted November 16, 2026 through RouteNote, and waiting on approval. The SoundCloud upload and the player in the <a href="#sax">Sax section</a> are already public. Store links replace the note below when they are live.</p>
+        <ul class="meta">
+          <!--
+            When RouteNote approves Alto Sax Jam, remove the "Awaiting approval" pill
+            and add the live store links in this list. Leave the SoundCloud link.
+            <li><a href="SPOTIFY_URL">Alto Sax Jam on Spotify</a></li>
+            <li><a href="APPLE_MUSIC_URL">Alto Sax Jam on Apple Music</a></li>
+          -->
+          <li><span class="pill">Awaiting approval</span></li>
+          <li><a href="https://soundcloud.com/sonicrift/alto-sax-jam-nov-15-2026">Alto Sax Jam on SoundCloud</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="wrap section" id="sax" aria-labelledby="sax-title">
+      <h2 id="sax-title">Sax</h2>
+      <p>Alto saxophone is the live instrument in sonicrift. Recordings hosted on this site go here, so later ones can sit under this heading without a new page.</p>
       <figure class="audio-card">
         <figcaption>
-          <p class="kicker">Listen · sonicrift</p>
-          <h2>Alto sax jam</h2>
+          <p class="kicker">Listen · <span class="keep-case">sonicrift</span></p>
+          <h3>Alto sax jam</h3>
           <p>Recorded November 15, 2026. 11 minutes 3 seconds. Alto saxophone, credited to sonicrift.</p>
         </figcaption>
         <audio controls preload="metadata">
           <source src="/assets/audio/alto-sax-jam-2026-11-15.m4a" type="audio/mp4">
-          Your browser cannot play this recording. <a href="/assets/audio/alto-sax-jam-2026-11-15.m4a">Download the AAC file</a>, or listen on <a href="https://soundcloud.com/sonicrift">SoundCloud</a>.
+          Your browser cannot play this recording. <a href="/assets/audio/alto-sax-jam-2026-11-15.m4a">Download the AAC file</a>, or listen on <a href="https://soundcloud.com/sonicrift/alto-sax-jam-nov-15-2026">SoundCloud</a>.
         </audio>
-        <p class="audio-links"><a href="https://soundcloud.com/sonicrift">More from sonicrift on SoundCloud<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+        <p class="audio-links"><a href="https://soundcloud.com/sonicrift/alto-sax-jam-nov-15-2026">Alto Sax Jam on SoundCloud</a> · <a href="https://soundcloud.com/sonicrift">More from sonicrift on SoundCloud</a></p>
       </figure>
-    </div>
-    <div class="wrap section">
-      <div class="frame soundcloud">
-        <iframe title="sonicrift on SoundCloud" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/sonicrift&amp;color=%23215326&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-      </div>
-      <p><a class="btn" href="https://soundcloud.com/sonicrift">Open sonicrift on SoundCloud<span class="visually-hidden"> (opens in a new tab)</span></a></p>
-    </div>
+    </section>
+
+    <section class="wrap section prose" aria-labelledby="about-sonicrift">
+      <h2 id="about-sonicrift">About sonicrift</h2>
+      <p>The name is sonicrift, lowercase, when I write it. On Spotify and Apple Music the artist field says Matthew Finley. That is the store name. The project and the store listing are the same catalog.</p>
+      <p>The coded music is written in Python. The public repository is <a href="https://github.com/m-fin/sonic-rift">github.com/m-fin/sonic-rift</a>. Machine Sleep and Space Drift are generated there. Bionic Body is the piece tied to the <a href="https://m-fin.github.io/bionic-body/">Bionic Body Tracker</a>, where each body system on the tracker becomes an instrument.</p>
+      <p>Signals, from 2020, is the first official EP. The alto saxophone is the live-instrument thread: a recording of playing, next to pieces the code renders. The music sits beside the games and the other projects on this site. It is part of the same work, not a separate brand.</p>
+    </section>
+
+    <section class="wrap section" aria-labelledby="follow-title">
+      <h2 id="follow-title">Follow</h2>
+      <p>SoundCloud, Spotify, and Apple Music are the listening accounts. The RSS feed is for notes on this site. There is no mailing list.</p>
+      <ul class="link-row">
+        <li><a class="btn" rel="me" href="https://soundcloud.com/sonicrift">SoundCloud</a></li>
+        <li><a class="btn" rel="me" href="https://open.spotify.com/artist/622lO1Sz70XKqIC80aKaYf">Spotify</a></li>
+        <li><a class="btn" rel="me" href="https://music.apple.com/us/artist/matthew-finley/901965944">Apple Music</a></li>
+        <li><a class="btn" href="/feed.xml">RSS feed</a></li>
+      </ul>
+    </section>

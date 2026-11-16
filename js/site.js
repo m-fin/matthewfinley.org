@@ -5,10 +5,21 @@ import { initProjects } from "./projects.js";
 import { initSupport } from "./support.js";
 import { initViews } from "./views.js";
 
+function syncSpotifyEmbeds(theme) {
+  document.querySelectorAll("iframe[data-spotify-embed]").forEach((frame) => {
+    const base = frame.getAttribute("data-spotify-embed");
+    if (!base) return;
+    const next = new URL(base);
+    next.searchParams.set("theme", theme === "light" ? "1" : "0");
+    if (frame.getAttribute("src") !== next.href) frame.setAttribute("src", next.href);
+  });
+}
+
 function syncThemeButton() {
   const button = document.querySelector("#theme-toggle");
-  if (!button) return;
   const theme = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+  syncSpotifyEmbeds(theme);
+  if (!button) return;
   const next = theme === "light" ? "dark" : "light";
   button.textContent = next === "light" ? "Light theme" : "Dark theme";
   button.setAttribute("aria-label", `Switch to ${next} theme`);
