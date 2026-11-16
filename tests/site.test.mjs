@@ -184,6 +184,7 @@ test("generated site has no personal contact leaks or live ad code", () => {
     "index.html",
     "about/index.html",
     "projects/index.html",
+    "inventions/index.html",
     "music/index.html",
     "videos/index.html",
     "blog/index.html",
@@ -222,7 +223,19 @@ test("generated site has no personal contact leaks or live ad code", () => {
   assert.match(headers, /googlesyndication\.com/);
   assert.match(headers, /challenges\.cloudflare\.com/);
   assert.match(readFileSync(join(root, "sitemap.xml"), "utf8"), /https:\/\/matthewfinley\.org\/about\//);
+  assert.match(readFileSync(join(root, "sitemap.xml"), "utf8"), /https:\/\/matthewfinley\.org\/inventions\//);
   assert.match(readFileSync(join(root, "feed.xml"), "utf8"), /what-im-making/);
-  assert.match(readFileSync(join(root, "music/index.html"), "utf8"), /soundcloud\.com\/sonicrift/);
-  assert.equal((readFileSync(join(root, "music/index.html"), "utf8").match(/<h1>[^<]*Sonicrift/)), null);
+  const music = readFileSync(join(root, "music/index.html"), "utf8");
+  assert.match(music, /soundcloud\.com\/sonicrift/);
+  assert.match(music, /<audio /);
+  assert.match(music, /\/assets\/audio\/alto-sax-jam-2026-11-15\.m4a/);
+  assert.equal((music.match(/<h1>[^<]*Sonicrift/)), null);
+  assert.equal(statSync(join(root, "assets/audio/alto-sax-jam-2026-11-15.m4a")).isFile(), true);
+  const inventions = readFileSync(join(root, "inventions/index.html"), "utf8");
+  assert.match(inventions, /Phone harness/);
+  assert.match(inventions, /Coming soon/);
+  assert.match(inventions, /href="\/inventions\/" aria-current="page"/);
+  assert.equal(/JazzLab|saXholder|Y-frame|belly arm|shoulder arms/i.test(inventions), false);
+  assert.equal(/patent pending/i.test(inventions), false);
+  assert.match(readFileSync(join(root, "index.html"), "utf8"), /href="\/inventions\/"/);
 });
